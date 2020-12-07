@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liberty Form </title>
+    <link rel="stylesheet" href="style.css">
+    <script> src="script.js" </script>
+</head>
+<body>
+<div class="background">
+    <div class="content">
+        <header>
+            <h3>Request More Information</h3>
+        </header>
+        <form  id="form" action="tell-me-more.html" method="get">
+            <div class="row">
+                <label for="degree-select">What degree type would you like?*</label>
+                <div class="form-control">
+                    <select class="select" name="degree-select" id="degree-select" onclick="selectUnlock()">
+                        <option value="Select">Select</option>
+                        <option value="Online">Online</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Academy">Academy (K-12)</option>
+                    </select>
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="row">
+                <label for="major-select">What would you like to study?*</label>
+                <div class="form-control">
+                    <select class="select" name="major-select" id="major-select" disabled="disabled">
+                        <option id="1" value="Select degree type above">Select degree type above</option>
+                        <option id="comms" value="Communications" hidden="hidden">Communications</option>
+                        <option id="history" value="History">History</option>
+                        <option id="science" value="Science">Science</option>
+                        <option id="math" value="Math">Math</option>
+                        <option id="physics" value="Physics">Physics</option>
+                        <option id="calculus" value="Calculus">Calculus</option>
+                    </select>
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="row">
+                <table>
+                    <td id="left">
+                        <label for="first-name">First Name*</label>
+                        <div id="lef-input">
+                            <div class="form-control">
+                                <input type="text" name="first-name" id="first-name">
+                                <small>Error message</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td id="right">
+                        <label for="last-name">Last Name*</label>
+                        <div id="right-input">
+                            <div class="form-control">
+                                <input type="text" name="last-name" id="last-name">
+                                <small>Error message</small>
+                            </div>
+                        </div>
+                    </td>
+                </table>
+            </div>
+            <div class="row">
+                <label for="email">Email*</label>
+                <div class="form-control">
+                    <input type="email" name="email" id="email">
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="row">
+                <label  for="Telephone">Telephone*</label>
+                <div class="form-control">
+                    <input type="tel" name="Telephone" id="Telephone">
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="row">
+                <table id="address-table">
+                    <td id="address-text">
+                        <label>Address*</label>
+                    </td>
+                    <td id="find-address">
+                        <label>
+                            <input type="button" id="address-button" value="Apt., P.O box, or don't see your address?" onclick="addFields()">
+                        </label>
+                    </td>
+                </table>
+                <div class="form-control">
+                    <input type="text" id="address-input" placeholder="Enter a location">
+                    <small id="small-visible">Error message</small>
+                </div>
+                <div id="hidden-container">
+                    <div class="hidden-row">
+                        <label for="street-address">Street Address*</label>
+                        <div class = form-control>
+                        <input type="text" id="street-address">
+                        <small class="small-hidden">Error message</small>
+                        </div>
+                    </div>
+                    <div class="hidden-row">
+                        <label for="city">City*</label>
+                        <div class = form-control>
+                            <input type="text" id="city">
+                            <small class="small-hidden">Error message</small>
+                        </div>
+                    </div>
+                    <div class="hidden-row">
+                        <table>
+                            <td class="left">
+                                <label for="state">State/Province*</label>
+                                <div class="lef-input">
+                                    <div class="form-control">
+                                        <select class="select" name="state" id="state">
+                                            <option id ="Select">Select</option>
+                                            <option id="Va" value="Virginia">Virginia</option>
+                                            <option id="Ga" value="Georgia">Georgia</option>
+                                            <option id="La" value="Louisiana">Louisiana</option>
+                                            <option>etc.</option>
+                                        </select>
+                                        <small class="small-hidden">Error message</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="right">
+                                <label for="zip">Zip/Postal Code*</label>
+                                <div class="right-input">
+                                    <div class="form-control">
+                                        <input type="text" name=zip id="zip">
+                                        <small class="small-hidden">Error message</small>
+                                    </div>
+                                </div>
+                            </td>
+                        </table>
+                    </div>
+                    <div class="hidden-row">
+                        <input type="button" id="automated-search" value="Switch to Automated Search" onclick="hideFields()">
+                    </div>
+                </div>
+            </div>
+            <div id="more-button">
+                <input type="submit" id="button" value="Tell Me More">
+            </div>
+            <div class="terms">
+                <p>
+                    By submitting contact information through this form, I agree that Liberty University and it affiliates
+                    may call me and/or text me about its offerings by any phone number I have provided and may provide in
+                    the future , including any wireless number, using automated technology
+                </p>
+                <p>
+                    Message and data rates may apply. For additional information, text HELP to 49595 or 49569. You may
+                    opt-out at any time by sending stop to 49595 or 49596. Visit for <a href="https://www.liberty.edu/informationservices/index.cfm?PID=31265" target="_blank" style="text-decoration:none; color: #1a75ff"> Terms & Conditions</a>
+                    and <a href="https://www.liberty.edu/offices/privacy-policy/"  target="_blank" style="text-decoration:none; color: #1a75ff">Privacy Policy</a>
+                </p>
+                <p>
+                <h4>
+                <div id="h-left"></div>
+                <div id="h-right"></div>
+                    OR
+            </h4>
+                <div id="submit">
+                    <button type="submit" id="submit-button">Apply Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5wwvfhDJAXLkwfZpPoeZtJL5bopY2BN0&libraries=places&callback=activatePlacesSearch"></script>
+</body>
+</html>
