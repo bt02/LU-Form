@@ -1,2 +1,2 @@
 # LU-Form
-https://rawcdn.githack.com/bt02/LU-Form/d55cf458570dce97f48989c10e121e5fc4033bac/LU_Form.html
+https://rawcdn.githack.com/bt02/LU-Form/5adf9de8679ac48521608259a61a6548a8030a29/LU_Form.html
